@@ -1,0 +1,52 @@
+html {
+    scroll-behavior:smooth;
+  }
+
+.border {
+    border: 4px solid red;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+:root {
+    --bodyBG: #f6f6f6;
+    --bodyFont: #2b3445;
+    --blue: #9fc5ef;
+    --icon: #40464d;
+    --blue-button:#1976d2;
+    --footer-bg: #212529;
+    --white : #fff;
+}
+
+.fa-solid {
+    color: var(--icon);
+}
+
+a,
+button {
+    all: unset;
+    display: inline-block;
+    transition: 0.2;
+}
+
+button:active,
+a:active {
+    scale: 0.8;
+}
+
+main {
+    width: 80%;
+    margin-inline: auto;
+}
+
+
+@media (width < 600px) {
+    main{
+        width: 100%;
+        margin-inline:auto;
+    }
+
+}
