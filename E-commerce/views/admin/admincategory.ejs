@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link href="https://bootswatch.com/5/litera/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="admin-panel">
+        <%- include('../parts/adminheader.ejs') %>
+    </div>
+    <div class="content">
+        <h2>Categories</h2>
+        <br>
+        <a href="/api/v1/admin/addcat">add category</a>
+        <br>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-light">
+                    <th scope="row">Category Name</th>
+                    <th scope="row">Category Color</th>
+                    <th scope="row">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cats.forEach(cat => { %>
+                    <tr class="table-light">
+                        <td><%= cat.name %></td>
+                        <td><%= cat.color %></td>
+                        <td>
+                            <a href="/api/v1/admin/editcat/<%=cat.id %>">Edit</a>
+                            <form action="/api/v1/admin/deletecat/<%=cat.id %>" method="post">
+                                <input type="submit" value="Delete" onclick="alert('if you delete this all the products with this cat will be deleted')">
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb" class="bg-body-tertiary rounded-3 p-3 mb-4">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="/api/v1/user/profile/<%= data._id %>">Back=></a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                                alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3"><%= data.name %></h5>
+                            <p class="text-muted mb-1">Welcome <%= data.name %></p>
+                            <p class="text-muted mb-4">you can edit your profile
+                            </p>
+                            <p class="text-muted mb-4">you can edit your orders too ,but only the ones that has not been shipped yet </p>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body p-0">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <form action="/api/v1/user/updateprofile/<%= data._id %>?_method=PUT" method="POST">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Full Name</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="name" type="text" class="text-muted mb-0" value="<%= data.name %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Email</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="email" type="text" class="text-muted mb-0" value="<%= data.email %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Phone</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="phone" type="text" class="text-muted mb-0" value="<%= data.phone %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Street</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="street" type="text" class="text-muted mb-0" value="<%= data.street %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Apartment</p>
+                                </div>
+                                <div class="col-sm-9"><input name="apartment" type="text" class="text-muted mb-0" value="<%= data.apartment %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">zip</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="zip" type="text" class="text-muted mb-0" value="<%= data.zip %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">City</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="city" type="text" class="text-muted mb-0" value="<%= data.city %>">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Country</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input name="country" type="text" class="text-muted mb-0" value="<%= data.country %>">
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class-="col-sm-9">
+                                        <input type="submit" value="update">
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card mb-4">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

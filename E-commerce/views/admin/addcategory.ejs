@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://bootswatch.com/5/litera/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="http://localhost:4000/api/v1/admin">back to dashboard</a>
+    <h2>Add cat</h2>
+    <form action="/api/v1/admin/addcat" method="POST">
+        <div>
+            <label class="form-label" for="name">Name:</label>
+            <input class="form-control" type="text" id="name" name="name" required />
+        </div>
+        <div>
+            <label class="form-label" for="description">Color:</label>
+            <input  class="form-control" type="text" id="color" name="color" required>
+        </div>
+        <br>
+        <div>
+            <input  type="submit" value="Add category" />
+        </div>
+    </form>
+</body>
+
+</html>

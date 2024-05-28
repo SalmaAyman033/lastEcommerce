@@ -1,0 +1,105 @@
+[02:31, 28/05/2024] Sohilttty❤️❤️: <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://bootswatch.com/5/litera/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="http://localhost:4000/api/v1/admin">back to dashboard</a>
+    <h2>Add cat</h2>
+    <form action="/api/v1/admin/addcat" method="POST">
+        <div>
+            <label class="form-label" for="name">Name:</label>
+            <input class="form-control" type="text" id="name" name="name" required />
+        </div>
+        <div>
+            <label class="form-label" for="description">Color:</label>
+            <input  class="form-control" type="text" id="color" name="color" required>
+        </div>
+        <br>
+        <div>
+            <input  type="submit" value="Add category" />
+        </div>
+    </form>
+</body>
+
+</html>
+[02:31, 28/05/2024] Sohilttty❤️❤️: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://bootswatch.com/5/litera/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="http://localhost:4000/api/v1/admin">back to dashboard</a>
+    <h2>Add Product</h2>
+    <form action="/api/v1/admin/addproduct" method="POST">
+      <div>
+        <label  class="form-label" for="name">Name:</label>
+        <input class="form-control" style="width: 200px; height: 30px;" type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label class="form-label" for="description">Description:</label>
+        <textarea class="form-control"  style="width: 200px; height: 30px;" id="description" name="description" required></textarea>
+      </div>
+      <div>
+        <label class="form-label" for="richDescription">Rich Description:</label>
+        <textarea class="form-control"  style="width: 200px; height: 30px;" id="richDescription" name="richDescription"></textarea>
+      </div>
+      <div>
+        <label class="form-label" for="image">Image URL:</label>
+        <input class="form-control"  style="width: 200px; height: 30px;" type="text" id="image" name="image" />
+      </div>
+      <div>
+        <label class="form-label"  for="images">Additional Images:</label>
+        <input class="form-control" style="width: 200px; height: 30px;" type="text" id="images" name="images" />
+      </div>
+      <div>
+        <label class="form-label" for="brand">Brand:</label>
+        <input class="form-control"  style="width: 200px; height: 30px;" type="text" id="brand" name="brand" />
+      </div>
+      <div>
+        <label class="form-label" for="price">Price:</label>
+        <input
+        style="width: 200px; height: 30px;"
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          step="0.01"
+          class="form-control" 
+          required
+        />
+      </div>
+      <div>
+        <label class="form-label" for="category">Category:</label>
+        <input class="form-control" style="width: 200px; height: 30px;" type="text" id="category" name="category" />
+      </div>
+      <div>
+        <label class="form-label" for="countInStock">Count In Stock:</label>
+        <input
+          style="width: 200px; height: 30px;"
+          type="number"
+          id="countInStock"
+          name="countInStock"
+          min="0"
+          required
+          class="form-control" 
+        />
+      </div>
+      <div>
+        <label class="form-label" for="isFeatured">Featured:</label>
+        <input type="checkbox" id="isFeatured" name="isFeatured" />
+      </div>
+      <div>
+        <input type="submit" value="Add Product" />
+      </div>
+    </form>
+  </body>
+</html>

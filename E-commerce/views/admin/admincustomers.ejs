@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page for users</title>
+    <link href="https://bootswatch.com/5/litera/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="admin-panel">
+        <%- include('../parts/adminheader.ejs') %>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-light">
+                <th scope="row">ID</th>
+                <th scope="row">Name</th>
+                <th scope="row">Email</th>
+                <th scope="row">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr class="table-light">
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><form action="/api/v1/admin/deleteuser/<%=user.id %>" method="post">
+                        <input class="form-control"  type="submit" value="Delete">
+                    </form></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
